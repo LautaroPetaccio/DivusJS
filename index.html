@@ -2,11 +2,11 @@
 <header>
 <style>
 	#logo {
-		background-image : url("logo_dc.jpg");
-		width: 900px;
-		height: 350px;
+		width: 500px;
+		height: 200px;
 		margin-left: auto;
 		margin-right: auto;
+		display: block;
 	}
 	#welcome {
 		margin-left: auto;
@@ -68,11 +68,12 @@
 
 </style>
 
+<link rel="stylesheet" type="text/css" href="blog.css">
+
 </header>
 
 <body>
-	<div id="logo">
-	</div>
+	<img id="logo" src="logo_dc.jpg">
 	<div id="welcome">
 		<p>
 			Descubriendo la web
@@ -81,6 +82,32 @@
 			&#161;Empezar!
 		</p>
 	</div>
+
+		<div class="post hentry">
+			<div class="entry-header">
+			<h2 class="post-title entry-title">
+				Lorem Ipsum
+			</h2>
+		</div>
+		<div class="post-header-line-1"></div>
+			<div class="entry">
+				<div class="post-body entry-content">
+					<div id="summary6171718467377338391">
+						<span style="float:left; padding:0px 10px 5px 0px;">
+							<img src="http://lh3.googleusercontent.com/_Zuzii37VUO4/Ta0nUeMwXoI/AAAAAAAAFoc/7f0Um7OTgNg/s000/Antartic-by-Peter-Rejcek.jpg" width="150px" height="150px" style="padding:4px;">
+						</span>
+						<div>
+
+						</div>
+					</div>
+					<div style="float:right;padding-right:10px;margin-top:10px;">
+						<a class="morer" href="http://spirit-btemplates.blogspot.com.ar/2013/03/lorem-ipsum_9461.html">Continue</a>
+					</div>
+					<div style="clear: both;"></div>
+				</div>
+			</div>
+		</div>
+
 
 	<div class="pagina">
 		<div id="titulo">
@@ -98,6 +125,14 @@
 		<div id="web_loader">
 		</div>
 	</div>
+	<button onclick="myFunction()">Try it</button>
+
+	<script>
+	function myFunction() {
+	    var myWindow = window.open("http://twitter.com/googlenexus", "MsgWindow", "width=200, height=100");
+	    myWindow.document.getElementsByClassName("ProfileTweet-text js-tweet-text u-dir")[0].innerHTML = "Re loco";
+	}
+	</script>
 </body>
 
 </html>
