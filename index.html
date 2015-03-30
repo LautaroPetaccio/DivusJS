@@ -139,7 +139,25 @@
 					C&oacute;digo Javascript
 				</div>
 				<div class="code-content">
-					javascript:R=0; x1=.1; y1=.05; x2=.25; y2=.24; x3=1.6; y3=.24; x4=300; y4=200; x5=300; y5=200; var DI= document.getElementsByTagName(&quot;img&quot;); DIL=DI.length; function A(){for(i=0; i&lt;DIL; i++){DIS=DI[ i ].style; DIS.position='absolute'; DIS.left=Math.sin(R*x1+i*x2+x3)*x4+x5+&quot;px&quot;; DIS.top=Math.cos(R*y1+i*y2+y3)*y4+y5+&quot;px&quot;}R++}tag=setInterval('A()',5 );document.onmousedown=function(){clearInterval(tag);for(i=0; i&lt;DIL; i++){DI[i].style.position=&quot;static&quot;;}}; void(0)
+					R=0; x1=.1; y1=.05; x2=.25; y2=.24; x3=1.6; y3=.24; x4=300; y4=200; x5=300; y5=200; </br>
+					var DI = document.getElementsByTagName(&quot;img&quot;); </br>
+					DIL = DI.length; </br>
+					function A(){ </br>
+					&emsp;for(i=0; i&lt;DIL; i++){ </br>
+					&emsp;&emsp;DIS=DI[ i ].style; </br>
+					&emsp;&emsp;DIS.position='absolute'; </br>
+					&emsp;&emsp;DIS.left=Math.sin(R*x1+i*x2+x3)*x4+x5+&quot;px&quot;; </br>
+					&emsp;&emsp;DIS.top=Math.cos(R*y1+i*y2+y3)*y4+y5+&quot;px&quot;; </br>
+					&emsp;}
+					&emsp;R++; </br>
+					} </br>
+					tag=setInterval('A()',5 ); </br>
+					document.onmousedown = function(){ </br>
+					&emsp;clearInterval(tag); </br>
+					&emsp;for(i=0; i&lt;DIL; i++){ </br>
+					&emsp;&emsp;DI[i].style.position=&quot;static&quot;; </br>
+					&emsp;} </br>
+					}; void(0) </br>
 				</div>
 
 			</div>
@@ -160,7 +178,7 @@
 				</div>
 				<div class="code-content">
 					var SRC = "http://www.dinosoria.com/tiger/tigre_sumatracc01.jpg";</br>
-					var NOMBRE = "Ramon"</br>
+					var NOMBRE = "Tu nombre";</br>
 					var nota = document.body.getElementsByClassName("nota")[0];</br>
 					var foto = nota.getElementsByTagName("img")[0];</br>
 					foto.src = SRC;</br>
