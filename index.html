@@ -1,7 +1,55 @@
 <html>
 <header>
-<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+	<link rel="stylesheet" href="jquery-ui/jquery-ui.css">
+	<script src="jquery-ui/external/jquery/jquery.js"></script>
+	<script src="jquery-ui/jquery-ui.js"></script>
 <style>
+	/*Tooltip*/
+	.ui-tooltip, .arrow:after {
+		background: black;
+		border: 2px solid white;
+	}
+	.ui-tooltip {
+		padding: 10px 20px;
+		color: white;
+		border-radius: 20px;
+		font: bold 14px "Helvetica Neue", Sans-Serif;
+		text-transform: uppercase;
+		box-shadow: 0 0 7px black;
+	}
+	.arrow {
+		width: 70px;
+		height: 16px;
+		overflow: hidden;
+		position: absolute;
+		left: 50%;
+		margin-left: -35px;
+		bottom: -16px;
+	}
+	.arrow.top {
+		top: -16px;
+		bottom: auto;
+	}
+	.arrow.left {
+		left: 20%;
+	}
+	.arrow:after {
+		content: "";
+		position: absolute;
+		left: 20px;
+		top: -20px;
+		width: 25px;
+		height: 25px;
+		box-shadow: 6px 5px 9px -9px black;
+		-webkit-transform: rotate(45deg);
+		-ms-transform: rotate(45deg);
+		transform: rotate(45deg);
+	}
+	.arrow.top:after {
+		bottom: -20px;
+		top: auto;
+	}
+
 	#logo {
 		width: 500px;
 		height: 200px;
@@ -9,6 +57,8 @@
 		margin-right: auto;
 		display: block;
 	}
+
+	/*Inicio*/
 	#welcome {
 		margin-left: auto;
 		margin-right: auto;
@@ -130,6 +180,20 @@
 
 <script type="text/javascript">
 	$(document).ready(function() {
+		$(document).tooltip({
+      position: {
+        my: "center bottom-20",
+        at: "center top",
+        using: function( position, feedback ) {
+          $( this ).css( position );
+          $( "<div>" )
+            .addClass( "arrow" )
+            .addClass( feedback.vertical )
+            .addClass( feedback.horizontal )
+            .appendTo( this );
+        }
+      }
+    });
 		$("#footer-volador").click(function() {
 			$('html, body').animate({
 			    scrollTop: $("#entry-noticias").offset().top
@@ -214,9 +278,9 @@
 						C&oacute;digo Javascript
 					</div>
 					<div class="code-content">
-						var SRC = "http://www.dinosoria.com/tiger/tigre_sumatracc01.jpg";</br>
-						var NOMBRE = "Tu nombre";</br>
-						var nota = document.body.getElementsByClassName("nota")[0];</br>
+						<span title="Localizacion de la imagen a usar."> var SRC = "http://www.dinosoria.com/tiger/tigre_sumatracc01.jpg";</span></br>
+						<span title="Tu nombre."> var NOMBRE = "Tu nombre"; </span> </br>
+						<span title="Conseguimos la primera noticia."> var nota = document.body.getElementsByClassName("nota")[0]; </span></br>
 						var foto = nota.getElementsByTagName("img")[0];</br>
 						foto.src = SRC;</br>
 						var pie = nota.getElementsByTagName("a")[2];</br>
