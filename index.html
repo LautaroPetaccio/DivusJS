@@ -236,6 +236,16 @@
 			    scrollTop: $("#entry-twitter").offset().top
 			}, 1000);
 		});
+		$("#footer-twitter").click(function() {
+			$('html, body').animate({
+			    scrollTop: $("#entry-fart").offset().top
+			}, 1000);
+		});
+		$("#footer-fart").click(function() {
+			$('html, body').animate({
+			    scrollTop: $("#entry-extras").offset().top
+			}, 1000);
+		});
 	});
 
 </script>
@@ -258,7 +268,7 @@
 
 			Una p&aacute;gina web din&aacute;mica es aquella que incorpora efectos como texto que aparece y desaparece, animaciones, acciones que se activan al pulsar botones y ventanas con mensajes de aviso al usuario.</br>
 
-			A continuaci&oacute;n, te vas a encontrar con una serie de recuadros que te van a ayudar a cambiar el c&oacute;digo Javascript de distintas p&aacute;ginas. Para esto, lo &uacute;nico que necesit&aacute;s es tener abierto un explorador web (Google Chrome o Firefox) y en las Herramientas abrir la Consola Javascript.
+			A continuaci&oacute;n, te vas a encontrar con una serie de recuadros que te van a ayudar a ejecutar c&oacute;digo Javascript de distintas p&aacute;ginas. Para esto, lo &uacute;nico que necesit&aacute;s es tener abierto un explorador web (Google Chrome o Firefox) y en las Herramientas abrir la Consola Javascript.
 	</div>
 
 	<div class="entry-wrapper" id="entry-volador">
@@ -381,7 +391,7 @@
 					</div>
 					<div class="code-content">
 						var SRC = &quot;http://www.xavierblancafort.net/images/Peludo1.jpg&quot;</br>
-						setInterval(function(){for(i=0;i<document.getElementsByClassName('_56p9').length;i++) { document.</br>getElementsByClassName('_56p9')[i].innerHTML = '<img width=32 height=32 src=SRC>'}}, 3000);
+						setInterval(function(){for(i=0;i<document.getElementsByClassName('_56p9').length;i++) { document.</br>getElementsByClassName('_56p9')[i].innerHTML = '&lt;img width=32 height=32 src=SRC&gt;'}}, 3000);
 					</div>
 
 				</div>
@@ -439,9 +449,72 @@
 
 					</div>
 				</div>
+				<div class="footer" id="footer-twitter">
+				Siguiente
+				</div>
 			</div>
 		</div>
 
+		<div class="entry-wrapper" id="entry-fart">
+			<div class="new-entry">
+				<div class="entry-header">
+					Un poco de m&uacute;sica para los o&iacute;dos	
+				</div>
+				<div class="content">
+
+					<p> Sub&iacute; el volumen de los parlantes y abr&iacute; tu p&aacute;gina preferida. Copiando esta simple l&iacute;nea de c&oacute;digo no vas a poder creer lo que pasa...
+					</p>
+
+					<div class="code">
+						<div class="code-header">
+							C&oacute;digo Javascript
+						</div>
+						<div class="code-content">
+							&lt;script src=&quot;http://code.onion.com/fartscroll.js&quot;&gt;&lt;/script&gt;
+						</div>
+
+					</div>
+				</div>
+				<div class="footer" id="footer-fart">
+				Siguiente
+				</div>
+			</div>
+		</div>
+
+		<div class="entry-wrapper" id="entry-extras">
+			<div class="new-entry">
+				<div class="entry-header">
+					Algunos extras de Google y Youtube	
+				</div>
+				<div class="content">
+
+					<p> Google tiene muchas funciones secretas. Entre ellas, se pueden buscar algunas palabras claves que ejecutan comandos. Abr&iacute; la p&aacute;gina de Google y la de YouTube y busc&aacute; lo siguiente:
+					</p>
+
+					<div class="code">
+						<div class="code-header">
+							B&uacute;squeda en Google
+						</div>
+						<div class="code-content">
+							Atari breakout</br>
+							Do a barrell roll</br>
+							zerg rush</br>
+							the answer to life the universe and everything
+
+						</div>
+						<div class="code-header">
+							B&uacute;squeda en YouTube
+						</div>
+						<div class="code-content">
+							do the harlem shake</br>
+							use the force luke</br>
+							Beam me up Scotty</br>
+							doge meme
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
 
 </body>
 
