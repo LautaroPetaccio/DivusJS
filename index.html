@@ -1,5 +1,6 @@
 <html>
 <header>
+<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
 <style>
 	#logo {
 		width: 500px;
@@ -110,8 +111,38 @@
 		margin: 20px;
 	}
 
+	.entry-wrapper {
+		width: 100vw; /* 90% of viewport vidth */
+		height: 100vw; /* ratio = 9/16 * 90 = 50.625 */
+	}
+
+	.footer {
+		font-weight: bold;
+		color: #FFFFFF;
+		background-color: #990033;
+		text-align: center;
+		padding-top: 10px;
+		padding-bottom: 10px;
+		cursor:pointer;
+	}
+
 </style>
 
+<script type="text/javascript">
+	$(document).ready(function() {
+		$("#footer-volador").click(function() {
+			$('html, body').animate({
+			    scrollTop: $("#entry-noticias").offset().top
+			}, 1000);
+		});
+		$("#footer-noticias").click(function() {
+			$('html, body').animate({
+			    scrollTop: $("#entry-facebook").offset().top
+			}, 1000);
+		});
+	});
+
+</script>
 
 </header>
 
@@ -126,93 +157,104 @@
 		</p>
 	</div>
 
-	<div class="new-entry">
-		<div class="entry-header">
-				Fotos voladoras
-		</div>
-		<div class="content">
+	<div class="entry-wrapper" id="entry-volador">
+		<div class="new-entry">
+			<div class="entry-header">
+					Fotos voladoras
+			</div>
+			<div class="content">
 
-			<p> Las im&aacute;genes son elementos blabla en la web, con este c&oacute;digo vas a poder ver c&oacute;mo se mueven en c&iacute;rculos. </p>
+				<p> Las im&aacute;genes son elementos blabla en la web, con este c&oacute;digo vas a poder ver c&oacute;mo se mueven en c&iacute;rculos. </p>
 
-			<div class="code">
-				<div class="code-header">
-					C&oacute;digo Javascript
+				<div class="code">
+					<div class="code-header">
+						C&oacute;digo Javascript
+					</div>
+					<div class="code-content">
+						R=0; x1=.1; y1=.05; x2=.25; y2=.24; x3=1.6; y3=.24; x4=300; y4=200; x5=300; y5=200; </br>
+						var DI = document.getElementsByTagName(&quot;img&quot;); </br>
+						DIL = DI.length; </br>
+						function A(){ </br>
+						&emsp;for(i=0; i&lt;DIL; i++){ </br>
+						&emsp;&emsp;DIS=DI[ i ].style; </br>
+						&emsp;&emsp;DIS.position='absolute'; </br>
+						&emsp;&emsp;DIS.left=Math.sin(R*x1+i*x2+x3)*x4+x5+&quot;px&quot;; </br>
+						&emsp;&emsp;DIS.top=Math.cos(R*y1+i*y2+y3)*y4+y5+&quot;px&quot;; </br>
+						&emsp;}
+						&emsp;R++; </br>
+						} </br>
+						tag=setInterval('A()',5 ); </br>
+						document.onmousedown = function(){ </br>
+						&emsp;clearInterval(tag); </br>
+						&emsp;for(i=0; i&lt;DIL; i++){ </br>
+						&emsp;&emsp;DI[i].style.position=&quot;static&quot;; </br>
+						&emsp;} </br>
+						}; void(0) </br>
+					</div>
+
 				</div>
-				<div class="code-content">
-					R=0; x1=.1; y1=.05; x2=.25; y2=.24; x3=1.6; y3=.24; x4=300; y4=200; x5=300; y5=200; </br>
-					var DI = document.getElementsByTagName(&quot;img&quot;); </br>
-					DIL = DI.length; </br>
-					function A(){ </br>
-					&emsp;for(i=0; i&lt;DIL; i++){ </br>
-					&emsp;&emsp;DIS=DI[ i ].style; </br>
-					&emsp;&emsp;DIS.position='absolute'; </br>
-					&emsp;&emsp;DIS.left=Math.sin(R*x1+i*x2+x3)*x4+x5+&quot;px&quot;; </br>
-					&emsp;&emsp;DIS.top=Math.cos(R*y1+i*y2+y3)*y4+y5+&quot;px&quot;; </br>
-					&emsp;}
-					&emsp;R++; </br>
-					} </br>
-					tag=setInterval('A()',5 ); </br>
-					document.onmousedown = function(){ </br>
-					&emsp;clearInterval(tag); </br>
-					&emsp;for(i=0; i&lt;DIL; i++){ </br>
-					&emsp;&emsp;DI[i].style.position=&quot;static&quot;; </br>
-					&emsp;} </br>
-					}; void(0) </br>
-				</div>
-
+			</div>
+			<div class="footer" id="footer-volador">
+				Siguiente
 			</div>
 		</div>
 	</div>
 
-	<div class="new-entry">
-		<div class="entry-header">
-				&iexcl;APAREC&Eacute; EN LAS NOTICIAS!
-		</div>
-		<div class="content">
+	<div class="entry-wrapper" id="entry-noticias">
+		<div class="new-entry">
+			<div class="entry-header">
+					&iexcl;APAREC&Eacute; EN LAS NOTICIAS!
+			</div>
+			<div class="content">
 
-			<p> Cambiar los contenidos de las noticias es super simple dado que consisten en porciones de c&oacute;digo blabla. &iexcl;Animate a modificarla como quieras! </p>
+				<p> Cambiar los contenidos de las noticias es super simple dado que consisten en porciones de c&oacute;digo blabla. &iexcl;Animate a modificarla como quieras! </p>
 
-			<div class="code">
-				<div class="code-header">
-					C&oacute;digo Javascript
+				<div class="code">
+					<div class="code-header">
+						C&oacute;digo Javascript
+					</div>
+					<div class="code-content">
+						var SRC = "http://www.dinosoria.com/tiger/tigre_sumatracc01.jpg";</br>
+						var NOMBRE = "Tu nombre";</br>
+						var nota = document.body.getElementsByClassName("nota")[0];</br>
+						var foto = nota.getElementsByTagName("img")[0];</br>
+						foto.src = SRC;</br>
+						var pie = nota.getElementsByTagName("a")[2];</br>
+						pie.innerHTML = NOMBRE + " visita el Departamento de Computaci&oacute;n!";</br>
+						var texto = nota.getElementsByTagName("a")[6];</br>
+						texto.innerHTML = NOMBRE + " visit&oacute; la Semana de la Computaci&oacute;n y le encant&oacute;! :D";</br>
+					</div>
+
 				</div>
-				<div class="code-content">
-					var SRC = "http://www.dinosoria.com/tiger/tigre_sumatracc01.jpg";</br>
-					var NOMBRE = "Tu nombre";</br>
-					var nota = document.body.getElementsByClassName("nota")[0];</br>
-					var foto = nota.getElementsByTagName("img")[0];</br>
-					foto.src = SRC;</br>
-					var pie = nota.getElementsByTagName("a")[2];</br>
-					pie.innerHTML = NOMBRE + " visita el Departamento de Computaci&oacute;n!";</br>
-					var texto = nota.getElementsByTagName("a")[6];</br>
-					texto.innerHTML = NOMBRE + " visit&oacute; la Semana de la Computaci&oacute;n y le encant&oacute;! :D";</br>
-				</div>
-
+			</div>
+			<div class="footer" id="footer-noticias">
+				Siguiente
 			</div>
 		</div>
 	</div>
 
+	<div class="entry-wrapper" id="entry-facebook">
+		<div class="new-entry">
+			<div class="entry-header">
+					&iexcl;Cambi&aacute; el chat de tus amigos!
+			</div>
+			<div class="content">
 
-	<div class="new-entry">
-		<div class="entry-header">
-				&iexcl;Cambi&aacute; el chat de tus amigos!
-		</div>
-		<div class="content">
+				<p> Entr&aacute; a Facebook, copi&aacute; y peg&aacute; el c&oacute;digo teniendo una ventana de chat abierta, fijate qu&eacute; tiene tu amigo para decirte. </p>
 
-			<p> Entr&aacute; a Facebook, copi&aacute; y peg&aacute; el c&oacute;digo teniendo una ventana de chat abierta, fijate qu&eacute; tiene tu amigo para decirte. </p>
+				<div class="code">
+					<div class="code-header">
+						C&oacute;digo Javascript
+					</div>
+					<div class="code-content">
+						var SRC = "Voy a estudiar computacion!"; </br>
+						var conv_window = document.getElementsByClassName("conversation")[0];</br>
+						var conversations = conv_window.getElementsByClassName("_5wd4 _1nc7 direction_ltr _5yt9 _2cnu");</br>
+						var last_conversation = conversations[conversations.length-1];</br>
+						last_conversation.getElementsByTagName("span")[1].innerHTML = SRC;</br>
+					</div>
 
-			<div class="code">
-				<div class="code-header">
-					C&oacute;digo Javascript
 				</div>
-				<div class="code-content">
-					var SRC = "Voy a estudiar computacion!"; </br>
-					var conv_window = document.getElementsByClassName("conversation")[0];</br>
-					var conversations = conv_window.getElementsByClassName("_5wd4 _1nc7 direction_ltr _5yt9 _2cnu");</br>
-					var last_conversation = conversations[conversations.length-1];</br>
-					last_conversation.getElementsByTagName("span")[1].innerHTML = SRC;</br>
-				</div>
-
 			</div>
 		</div>
 	</div>
