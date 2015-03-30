@@ -50,6 +50,13 @@
 		top: auto;
 	}
 
+	.boxed {
+  		border: 5px solid grey;
+  		padding:10px;
+  		font-family:verdana;
+    	font-size:120%;
+	}
+
 	#logo {
 		width: 500px;
 		height: 200px;
@@ -194,6 +201,11 @@
         }
       }
     });
+		$("#empezar_button").click(function() {
+			$('html, body').animate({
+			    scrollTop: $("#entry-volador").offset().top
+			}, 1000);
+		});
 		$("#footer-volador").click(function() {
 			$('html, body').animate({
 			    scrollTop: $("#entry-noticias").offset().top
@@ -219,6 +231,12 @@
 		<p id="empezar_button">
 			&#161;Empezar!
 		</p>
+	</div>
+
+	<div class="boxed">
+  			JavaScript es un lenguaje de programaci&oacute;n que se utiliza principalmente para crear p&aacute;ginas web din&aacute;micas.
+
+			Una p&aacute;gina web din&aacute;mica es aquella que incorpora efectos como texto que aparece y desaparece, animaciones, acciones que se activan al pulsar botones y ventanas con mensajes de aviso al usuario.
 	</div>
 
 	<div class="entry-wrapper" id="entry-volador">
