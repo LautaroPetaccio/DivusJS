@@ -206,7 +206,13 @@
         }
       }
     });
+
 		$("#empezar_button").click(function() {
+			$('html, body').animate({
+			    scrollTop: $("#entry-inicio").offset().top
+			}, 1000);
+		});
+		$("#footer-inicio").click(function() {
 			$('html, body').animate({
 			    scrollTop: $("#entry-volador").offset().top
 			}, 1000);
@@ -256,20 +262,38 @@
 	<img id="logo" src="logo_dc.jpg">
 	<div id="welcome">
 		<p>
-			Descubriendo la web
+		<div align="center">
+			<img src="imgs/titulo.png" style="width:784px;height:210px"></br>
+		</div>
 		</p>
 		<p id="empezar_button">
 			&#161;Empezar!
 		</p>
 	</div>
 
-	<div class="boxed">
-  			JavaScript es un lenguaje de programaci&oacute;n que se utiliza principalmente para crear p&aacute;ginas web din&aacute;micas.</br>
+		<div class="entry-wrapper" id="entry-inicio">
+				<div class="boxed">
+		  			JavaScript es un lenguaje de programaci&oacute;n que se utiliza principalmente para crear p&aacute;ginas web din&aacute;micas.</br>
 
-			Una p&aacute;gina web din&aacute;mica es aquella que incorpora efectos como texto que aparece y desaparece, animaciones, acciones que se activan al pulsar botones y ventanas con mensajes de aviso al usuario.</br>
+					Una p&aacute;gina web din&aacute;mica es aquella que incorpora efectos como texto que aparece y desaparece, animaciones, acciones que se activan al pulsar botones y ventanas con mensajes de aviso al usuario.</br>
 
-			A continuaci&oacute;n, te vas a encontrar con una serie de recuadros que te van a ayudar a ejecutar c&oacute;digo Javascript de distintas p&aacute;ginas. Para esto, lo &uacute;nico que necesit&aacute;s es tener abierto un explorador web (Google Chrome o Firefox) y en las Herramientas abrir la Consola Javascript.
-	</div>
+					A continuaci&oacute;n, te vas a encontrar con una serie de recuadros que te van a ayudar a ejecutar c&oacute;digo Javascript de distintas p&aacute;ginas. Para esto, lo &uacute;nico que necesit&aacute;s es tener abierto un explorador web (Google Chrome o Firefox) y en las Herramientas abrir la Consola Javascript.</br>
+				</div>
+				<p>
+					<div align="center">
+						<img src="imgs/paso1.png" alt="Paso 1" style="width:752px;height:531px"></br>
+					</div>
+				</p>
+					<div align="center">
+						<img src="imgs/paso2.png" alt="Paso 2" style="width:800px;height:194px"></br>
+					</div>
+
+				<div class="footer" id="footer-inicio">
+					Siguiente
+				</div>
+			</div>
+	
+
 
 	<div class="entry-wrapper" id="entry-volador">
 		<div class="new-entry">
@@ -470,7 +494,22 @@
 							C&oacute;digo Javascript
 						</div>
 						<div class="code-content">
-							&lt;script src=&quot;http://code.onion.com/fartscroll.js&quot;&gt;&lt;/script&gt;
+							function loadScript(url, callback) {</br>
+							var head = document.getElementsByTagName('head')[0];</br>
+							var script = document.createElement('script');</br>
+							script.type = 'text/javascript';</br>
+							script.src = url;</br>
+							script.onreadystatechange = callback;</br>
+							script.onload = callback;</br>
+							head.appendChild(script);</br>
+							}</br>
+
+							function loadFarts() {</br>
+							 fartscroll(800);</br>
+							}</br>
+
+
+							loadScript("https://rawgit.com/theonion/fartscroll.js/master/fartscroll.js", loadFarts);</br>
 						</div>
 
 					</div>
