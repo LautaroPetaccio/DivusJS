@@ -51,7 +51,7 @@
 	}
 
 	.boxed {
-  		border: 5px solid grey;
+  		border: 5px solid gray;
   		padding:10px;
     	font-size:120%;
 	}
@@ -332,6 +332,7 @@
 	}
 	#manos_button:active {
 		position:relative;
+	}
 		
 
 </style>
@@ -459,11 +460,11 @@
 		<div align="left">
 			<figcaption><font face="verdana">Paso 1</figcaption>
 			<img src="imgs/paso1.png" style="width:500px;height:353px">
-			<img src="imgs/flecha1.png" style="width:250px;height:200px"></br>
-		</div></br>
+			<img src="imgs/flecha1.png" style="width:250px;height:200px"><br>
+		</div><br>
 		<div align="right">
 			<figcaption><font face="verdana">Paso 2</figcaption>
-			<img src="imgs/paso2.png" style="width:800px;height:194px"></br>
+			<img src="imgs/paso2.png" style="width:800px;height:194px"><br>
 		</div>
 		<div align="center">
 			<p id="empezar_button">
@@ -486,25 +487,25 @@
 						C&oacute;digo Javascript
 					</div>
 					<div class="code-content">
-						R=0; x1=.1; y1=.05; x2=.25; y2=.24; x3=1.6; y3=.24; x4=300; y4=200; x5=300; y5=200; </br>
-						var DI = document.getElementsByTagName(&quot;img&quot;); </br>
-						DIL = DI.length; </br>
-						function A(){ </br>
-						&emsp;for(i=0; i&lt;DIL; i++){ </br>
-						&emsp;&emsp;DIS=DI[ i ].style; </br>
-						&emsp;&emsp;DIS.position='absolute'; </br>
-						&emsp;&emsp;DIS.left=Math.sin(R*x1+i*x2+x3)*x4+x5+&quot;px&quot;; </br>
-						&emsp;&emsp;DIS.top=Math.cos(R*y1+i*y2+y3)*y4+y5+&quot;px&quot;; </br>
+						R=0; x1=.1; y1=.05; x2=.25; y2=.24; x3=1.6; y3=.24; x4=300; y4=200; x5=300; y5=200; <br>
+						var DI = document.getElementsByTagName(&quot;img&quot;); <br>
+						DIL = DI.length; <br>
+						function A(){ <br>
+						&emsp;for(i=0; i&lt;DIL; i++){ <br>
+						&emsp;&emsp;DIS=DI[ i ].style; <br>
+						&emsp;&emsp;DIS.position='absolute'; <br>
+						&emsp;&emsp;DIS.left=Math.sin(R*x1+i*x2+x3)*x4+x5+&quot;px&quot;; <br>
+						&emsp;&emsp;DIS.top=Math.cos(R*y1+i*y2+y3)*y4+y5+&quot;px&quot;; <br>
 						&emsp;}
-						&emsp;R++; </br>
-						} </br>
-						tag=setInterval('A()',5 ); </br>
-						document.onmousedown = function(){ </br>
-						&emsp;clearInterval(tag); </br>
-						&emsp;for(i=0; i&lt;DIL; i++){ </br>
-						&emsp;&emsp;DI[i].style.position=&quot;static&quot;; </br>
-						&emsp;} </br>
-						}; void(0) </br>
+						&emsp;R++; <br>
+						} <br>
+						tag=setInterval('A()',5 ); <br>
+						document.onmousedown = function(){ <br>
+						&emsp;clearInterval(tag); <br>
+						&emsp;for(i=0; i&lt;DIL; i++){ <br>
+						&emsp;&emsp;DI[i].style.position=&quot;static&quot;; <br>
+						&emsp;} <br>
+						}; void(0) <br>
 					</div>
 
 				</div>
@@ -529,15 +530,15 @@
 						C&oacute;digo Javascript
 					</div>
 					<div class="code-content">
-						<span title="Localizacion de la imagen a usar."> var SRC = "http://www.dinosoria.com/tiger/tigre_sumatracc01.jpg";</span></br>
-						<span title="Tu nombre."> var NOMBRE = "Tu nombre"; </span> </br>
-						<span title="Conseguimos la primera noticia."> var nota = document.body.getElementsByClassName("nota")[0]; </span></br>
-						var foto = nota.getElementsByTagName("img")[0];</br>
-						foto.src = SRC;</br>
-						var pie = nota.getElementsByTagName("a")[2];</br>
-						pie.innerHTML = NOMBRE + " visita el Departamento de Computaci&oacute;n!";</br>
-						var texto = nota.getElementsByTagName("a")[6];</br>
-						texto.innerHTML = NOMBRE + " visit&oacute; la Semana de la Computaci&oacute;n y le encant&oacute;! :D";</br>
+						<span title="Localizacion de la imagen a usar."> var SRC = "http://www.dinosoria.com/tiger/tigre_sumatracc01.jpg";</span><br>
+						<span title="Tu nombre."> var NOMBRE = "Tu nombre"; </span> <br>
+						<span title="Conseguimos la primera noticia."> var nota = document.body.getElementsByClassName("nota")[0]; </span><br>
+						<span title="Conseguimos la foto de la noticia.">var foto = nota.getElementsByTagName("img")[0];</span><br>
+						<span title="Cambiamos la direccion de la foto por la de SRC.">foto.src = SRC;</span><br>
+						<span title="Conseguimos el pie de pagina.">var pie = nota.getElementsByTagName("a")[2];</span><br>
+						<span title="Cambiamos el pie de pagina.">pie.innerHTML = NOMBRE + " visita el Departamento de Computaci&oacute;n!";</span><br>
+						<span title="Conseguimos el texto de la noticia.">var texto = nota.getElementsByTagName("a")[6];M\</span><br>
+						<span title="Cambiamos el texto de la noticia.">texto.innerHTML = NOMBRE + " visit&oacute; la Semana de la Computaci&oacute;n y le encant&oacute;! :D";</span><br>
 					</div>
 
 				</div>
@@ -562,11 +563,11 @@
 						C&oacute;digo Javascript
 					</div>
 					<div class="code-content">
-						var SRC = "Voy a estudiar computacion!"; </br>
-						var conv_window = document.getElementsByClassName("conversation")[0];</br>
-						var conversations = conv_window.getElementsByClassName("_5wd4 _1nc7 direction_ltr _5yt9 _2cnu");</br>
-						var last_conversation = conversations[conversations.length-1];</br>
-						last_conversation.getElementsByTagName("span")[1].innerHTML = SRC;</br>
+						var SRC = "Voy a estudiar computacion!"; <br>
+						var conv_window = document.getElementsByClassName("conversation")[0];<br>
+						var conversations = conv_window.getElementsByClassName("_5wd4 _1nc7 direction_ltr _5yt9 _2cnu");<br>
+						var last_conversation = conversations[conversations.length-1];<br>
+						last_conversation.getElementsByTagName("span")[1].innerHTML = SRC;<br>
 					</div>
 
 				</div>
@@ -591,8 +592,12 @@
 						C&oacute;digo Javascript
 					</div>
 					<div class="code-content">
-						var SRC = &quot;http://www.xavierblancafort.net/images/Peludo1.jpg&quot;</br>
-						setInterval(function(){for(i=0;i<document.getElementsByClassName('_56p9').length;i++) { document.</br>getElementsByClassName('_56p9')[i].innerHTML = '&lt;img width=32 height=32 src=SRC&gt;'}}, 3000);
+						var SRC = &quot;http://blog.eduvirama.com/wp-content/uploads/2015/03/manzana.jpg&quot;; <br>
+						setInterval(function(){<br>
+						&emsp;for(i=0;i&lt;document.getElementsByClassName('_55lt').length;i++) { <br>
+						&emsp;&emsp;document.getElementsByClassName(&quot;_55lt&quot;)[i].childNodes[0].src = &quot;http://blog.eduvirama.com/wp-content/uploads/2015/03/manzana.jpg&quot;;<br>
+						&emsp;}<br>
+						}, 3000); <br>
 					</div>
 
 				</div>
@@ -636,7 +641,7 @@
 				</div>
 				<div class="content">
 
-					<p> La mayor&iacute;a de los famosos usa Twitter con mucha frecuencia, &iquest;te imagin&aacute;s modificando sus opiniones?</br>
+					<p> La mayor&iacute;a de los famosos usa Twitter con mucha frecuencia, &iquest;te imagin&aacute;s modificando sus opiniones?<br>
 					Abr&iacute; la p&aacute;gina de Twitter de la persona que quieras, cambi&aacute; lo que est&aacute; entre comillas del c&oacute;digo como m&aacute;s te guste, pegalo en la consola y fijate qu&eacute; ocurre!
 					</p>
 
@@ -671,22 +676,22 @@
 							C&oacute;digo Javascript
 						</div>
 						<div class="code-content">
-							function loadScript(url, callback) {</br>
-							var head = document.getElementsByTagName('head')[0];</br>
-							var script = document.createElement('script');</br>
-							script.type = 'text/javascript';</br>
-							script.src = url;</br>
-							script.onreadystatechange = callback;</br>
-							script.onload = callback;</br>
-							head.appendChild(script);</br>
-							}</br>
+							function loadScript(url, callback) {<br>
+							&emsp;var head = document.getElementsByTagName('head')[0];<br>
+							&emsp;var script = document.createElement('script');<br>
+							&emsp;script.type = 'text/javascript';<br>
+							&emsp;script.src = url;<br>
+							&emsp;script.onreadystatechange = callback;<br>
+							&emsp;script.onload = callback;<br>
+							&emsp;head.appendChild(script);<br>
+							}<br>
 
-							function loadFarts() {</br>
-							 fartscroll(800);</br>
-							}</br>
+							function loadFarts() {<br>
+							&emsp;fartscroll(800);<br>
+							}<br>
 
 
-							loadScript("https://rawgit.com/theonion/fartscroll.js/master/fartscroll.js", loadFarts);</br>
+							loadScript("https://rawgit.com/theonion/fartscroll.js/master/fartscroll.js", loadFarts);<br>
 						</div>
 
 					</div>
@@ -712,9 +717,9 @@
 							B&uacute;squeda en Google
 						</div>
 						<div class="code-content">
-							Atari breakout</br>
-							Do a barrell roll</br>
-							Zerg rush</br>
+							Atari breakout<br>
+							Do a barrell roll<br>
+							Zerg rush<br>
 							the answer to life the universe and everything
 
 						</div>
@@ -722,9 +727,9 @@
 							B&uacute;squeda en YouTube
 						</div>
 						<div class="code-content">
-							do the harlem shake</br>
-							use the force luke</br>
-							Beam me up Scotty</br>
+							do the harlem shake<br>
+							use the force luke<br>
+							Beam me up Scotty<br>
 							doge meme
 						</div>
 					</div>
