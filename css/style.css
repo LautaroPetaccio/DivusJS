@@ -165,6 +165,18 @@
 	width: 800px;
 }
 
+.copied {
+	width: auto;
+	border:1px solid #990033;
+	font-weight: bold;
+	color: #FFFFFF;
+	background-color: #ba737f;
+	border-bottom-right-radius: 5px;
+	border-bottom-left-radius: 5px;
+	text-align: center;
+	padding: 4px;
+}
+
 .code {
 	width: auto;
 	border:1px solid #990033;

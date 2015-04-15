@@ -62,49 +62,49 @@ $(document).ready(function() {
 	var copy_volador_client = new ZeroClipboard($("#copy-volador"));
 	copy_volador_client.on( "ready", function( readyEvent ) {
 	  copy_volador_client.on( "aftercopy", function( event ) {
-	    show_copied_dialog();
+	    $("#copied-volador").show("blind");
 	  });
 	});
 
 	var copy_noticias_client = new ZeroClipboard($("#copy-noticias"));
 	copy_noticias_client.on( "ready", function( readyEvent ) {
 	  copy_noticias_client.on( "aftercopy", function( event ) {
-	    show_copied_dialog();
+	    $("#copied-noticias").show("blind");
 	  });
 	});
 
 	var copy_facebook_client = new ZeroClipboard($("#copy-facebook"));
 	copy_facebook_client.on( "ready", function( readyEvent ) {
 	  copy_facebook_client.on( "aftercopy", function( event ) {
-	    show_copied_dialog();
+	    $("#copied-facebook").show("blind");
 	  });
 	});
 
 	var copy_facebookfotos_client = new ZeroClipboard($("#copy-facebookfotos"));
 	copy_facebookfotos_client.on( "ready", function( readyEvent ) {
 	  copy_facebookfotos_client.on( "aftercopy", function( event ) {
-	    show_copied_dialog();
+	    $("#copied-facebookfotos").show("blind");
 	  });
 	});
 
 	var copy_gravity_client = new ZeroClipboard($("#copy-gravity"));
 	copy_gravity_client.on( "ready", function( readyEvent ) {
 	  copy_gravity_client.on( "aftercopy", function( event ) {
-	    show_copied_dialog();
+	    $("#copied-gravity").show("blind");
 	  });
 	});
 
 	var copy_twitter_client = new ZeroClipboard($("#copy-twitter"));
 	copy_twitter_client.on( "ready", function( readyEvent ) {
 	  copy_twitter_client.on( "aftercopy", function( event ) {
-	    show_copied_dialog();
+	    $("#copied-twitter").show("blind");
 	  });
 	});
 
 	var copy_fart_client = new ZeroClipboard($("#copy-fart"));
 	copy_fart_client.on( "ready", function( readyEvent ) {
 	  copy_fart_client.on( "aftercopy", function( event ) {
-	    show_copied_dialog();
+	    $("#copied-fart").show("blind");
 	  });
 	});
 });
