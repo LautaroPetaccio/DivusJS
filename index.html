@@ -394,6 +394,10 @@
 					+ "\"http://blog.eduvirama.com/wp-content/uploads/2015/03/manzana.jpg\";\n"
 					+ "	}\n"
 					+ "}, 3000); ");
+		$("#copy-gravity").attr("data-clipboard-text", "var script = document.createElement(\"script\");\n"
+					+ "script.src=\"https://gravityscript.googlecode.com/svn/trunk/gravityscript.js\";\n"
+					+ "document.body.appendChild(script);void(0);");
+
 
 		var copy_volador_client = new ZeroClipboard($("#copy-volador"));
 		copy_volador_client.on( "ready", function( readyEvent ) {
@@ -419,6 +423,13 @@
 		var copy_facebookfotos_client = new ZeroClipboard($("#copy-facebookfotos"));
 		copy_facebookfotos_client.on( "ready", function( readyEvent ) {
 		  copy_facebookfotos_client.on( "aftercopy", function( event ) {
+		    alert("Copied text to clipboard: " + event.data["text/plain"] );
+		  });
+		});
+
+		var copy_gravity_client = new ZeroClipboard($("#copy-gravity"));
+		copy_gravity_client.on( "ready", function( readyEvent ) {
+		  copy_gravity_client.on( "aftercopy", function( event ) {
 		    alert("Copied text to clipboard: " + event.data["text/plain"] );
 		  });
 		});
