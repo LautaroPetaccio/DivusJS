@@ -370,10 +370,26 @@
                             + "DI[i].style.position=\"static\";\n" 
                         + "}\n"
                     + "}; void(0)");
+		$("#copy-noticias").attr("data-clipboard-text", "var SRC = \"http://www.dinosoria.com/tiger/tigre_sumatracc01.jpg\";\n"
+					+ "var NOMBRE = \"Tu nombre\";"
+					+ "var nota = document.body.getElementsByClassName(\"nota\")[0];"
+					+ "var foto = nota.getElementsByTagName(\"img\")[0];"
+					+ "foto.src = SRC;"
+					+ "var pie = nota.getElementsByTagName(\"a\")[2];\n"
+					+ "pie.innerHTML = NOMBRE + \" visita el Departamento de Computación!\";\n"
+					+ "var texto = nota.getElementsByTagName(\"a\")[6];\n"
+					+ "texto.innerHTML = NOMBRE + \" visitó la Semana de la Computación y le encantó! :D\";");
 
 		var copy_volador_client = new ZeroClipboard($("#copy-volador"));
 		copy_volador_client.on( "ready", function( readyEvent ) {
 		  copy_volador_client.on( "aftercopy", function( event ) {
+		    alert("Copied text to clipboard: " + event.data["text/plain"] );
+		  });
+		});
+
+		var copy_noticias_client = new ZeroClipboard($("#copy-noticias"));
+		copy_noticias_client.on( "ready", function( readyEvent ) {
+		  copy_noticias_client.on( "aftercopy", function( event ) {
 		    alert("Copied text to clipboard: " + event.data["text/plain"] );
 		  });
 		});
