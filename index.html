@@ -399,6 +399,19 @@
 					+ "document.body.appendChild(script);void(0);");
 		$("#copy-twitter").attr("data-clipboard-text", "document.getElementsByClassName(\""
 					+ "ProfileTweet-text js-tweet-text u-dir\")[0].innerHTML = \"Aguante la Semana de la Computación!\";");
+		$("#copy-fart").attr("data-clipboard-text", "function loadScript(url, callback) {\n"
+					+ "var head = document.getElementsByTagName('head')[0];\n"
+					+ "var script = document.createElement('script');\n"
+					+ "script.type = 'text/javascript';\n"
+					+ "script.src = url;\n"
+					+ "script.onreadystatechange = callback;\n"
+					+ "script.onload = callback;\n"
+					+ "head.appendChild(script);\n"
+					+ "}\n"
+					+ "function loadFarts() {\n"
+					+ "fartscroll(800);\n"
+					+ "}\n"
+					+ "loadScript(\"https://rawgit.com/theonion/fartscroll.js/master/fartscroll.js\", loadFarts);");
 
 		var copy_volador_client = new ZeroClipboard($("#copy-volador"));
 		copy_volador_client.on( "ready", function( readyEvent ) {
@@ -438,6 +451,13 @@
 		var copy_twitter_client = new ZeroClipboard($("#copy-twitter"));
 		copy_twitter_client.on( "ready", function( readyEvent ) {
 		  copy_twitter_client.on( "aftercopy", function( event ) {
+		    alert("Copied text to clipboard: " + event.data["text/plain"] );
+		  });
+		});
+
+		var copy_fart_client = new ZeroClipboard($("#copy-fart"));
+		copy_fart_client.on( "ready", function( readyEvent ) {
+		  copy_fart_client.on( "aftercopy", function( event ) {
 		    alert("Copied text to clipboard: " + event.data["text/plain"] );
 		  });
 		});
