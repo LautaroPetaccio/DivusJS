@@ -3,6 +3,7 @@
 	<link rel="stylesheet" href="jquery-ui/jquery-ui.css">
 	<script src="jquery-ui/external/jquery/jquery.js"></script>
 	<script src="jquery-ui/jquery-ui.js"></script>
+	<script type="text/javascript" src="ZeroClipboard.js"></script>
 	<link href='http://fonts.googleapis.com/css?family=Handlee' rel='stylesheet' type='text/css'>
 <style>
 	/*Tooltip*/
@@ -191,6 +192,17 @@
 		background-color: white;
 	}
 
+	.code-copy-button {
+		font-weight: bold;
+		color: #FFFFFF;
+		background-color: #990033;
+		text-align: center;
+		padding: 5px;
+		border: none;
+		width: 100%;
+		cursor:pointer;
+	}
+
 	.entry-header {
 		margin: 20px;
 		
@@ -339,20 +351,28 @@
 
 <script type="text/javascript">
 	$(document).ready(function() {
-		$(document).tooltip({
-      position: {
-        my: "center bottom-20",
-        at: "center top",
-        using: function( position, feedback ) {
-          $( this ).css( position );
-          $( "<div>" )
-            .addClass( "arrow" )
-            .addClass( feedback.vertical )
-            .addClass( feedback.horizontal )
-            .appendTo( this );
-        	}
-      	}
-    	});
+
+		var client = new ZeroClipboard($("#copy-volador"));
+		client.on( "ready", function( readyEvent ) {
+		  client.on( "aftercopy", function( event ) {
+		    alert("Copied text to clipboard: " + event.data["text/plain"] );
+		  });
+		});
+
+	  $(document).tooltip({
+	      position: {
+	        my: "center bottom-20",
+	        at: "center top",
+	        using: function( position, feedback ) {
+	          $( this ).css( position );
+	          $( "<div>" )
+	            .addClass( "arrow" )
+	            .addClass( feedback.vertical )
+	            .addClass( feedback.horizontal )
+	            .appendTo( this );
+	        	}
+	      	}
+	    });
 
 		$("#inicio_button").click(function() {
 			$('html, body').animate({
@@ -404,7 +424,6 @@
 			    scrollTop: $("#entry-extras").offset().top
 			}, 1000);
 		});
-		entry-howto
 	});
 
 </script>
@@ -507,7 +526,9 @@
 						&emsp;} <br>
 						}; void(0) <br>
 					</div>
-
+					<div class="code-footer">
+						<button class="code-copy-button" id="copy-volador" data-clipboard-text="Copy Me!">Copiar al portapapeles</button>
+					</div>
 				</div>
 			</div>
 			<div class="footer" id="footer-volador">
@@ -537,10 +558,13 @@
 						<span title="Cambiamos la direccion de la foto por la de SRC.">foto.src = SRC;</span><br>
 						<span title="Conseguimos el pie de pagina.">var pie = nota.getElementsByTagName("a")[2];</span><br>
 						<span title="Cambiamos el pie de pagina.">pie.innerHTML = NOMBRE + " visita el Departamento de Computaci&oacute;n!";</span><br>
-						<span title="Conseguimos el texto de la noticia.">var texto = nota.getElementsByTagName("a")[6];M\</span><br>
+						<span title="Conseguimos el texto de la noticia.">var texto = nota.getElementsByTagName("a")[6];</span><br>
 						<span title="Cambiamos el texto de la noticia.">texto.innerHTML = NOMBRE + " visit&oacute; la Semana de la Computaci&oacute;n y le encant&oacute;! :D";</span><br>
 					</div>
 
+					<div class="code-footer">
+						<button class="code-copy-button" id="copy-noticias" data-clipboard-text="Copy Me!">Copiar al portapapeles</button>
+					</div>
 				</div>
 			</div>
 			<div class="footer" id="footer-noticias">
@@ -569,7 +593,9 @@
 						var last_conversation = conversations[conversations.length-1];<br>
 						last_conversation.getElementsByTagName("span")[1].innerHTML = SRC;<br>
 					</div>
-
+					<div class="code-footer">
+						<button class="code-copy-button" id="copy-facebook" data-clipboard-text="Copy Me!">Copiar al portapapeles</button>
+					</div>
 				</div>
 			</div>
 			<div class="footer" id="footer-facebook">
@@ -599,6 +625,9 @@
 						&emsp;}<br>
 						}, 3000); <br>
 					</div>
+					<div class="code-footer">
+						<button class="code-copy-button" id="copy-facebookfotos" data-clipboard-text="Copy Me!">Copiar al portapapeles</button>
+					</div>
 
 				</div>
 			</div>
@@ -623,6 +652,9 @@
 						</div>
 						<div class="code-content">
 							var script = document.createElement("script"); script.src="https://gravityscript.googlecode.com/svn/trunk/gravityscript.js"; document.body.appendChild(script);void(0);
+						</div>
+						<div class="code-footer">
+							<button class="code-copy-button" id="copy-gravity" data-clipboard-text="Copy Me!">Copiar al portapapeles</button>
 						</div>
 
 					</div>
@@ -651,6 +683,9 @@
 						</div>
 						<div class="code-content">
 							document.getElementsByClassName("ProfileTweet-text js-tweet-text u-dir")[0].innerHTML = "Aguante la Semana de la Computaci&oacute;n!";
+						</div>
+						<div class="code-footer">
+							<button class="code-copy-button" id="copy-twitter" data-clipboard-text="Copy Me!">Copiar al portapapeles</button>
 						</div>
 
 					</div>
@@ -692,6 +727,9 @@
 
 
 							loadScript("https://rawgit.com/theonion/fartscroll.js/master/fartscroll.js", loadFarts);<br>
+						</div>
+						<div class="code-footer">
+							<button class="code-copy-button" id="copy-fart" data-clipboard-text="Copy Me!">Copiar al portapapeles</button>
 						</div>
 
 					</div>
