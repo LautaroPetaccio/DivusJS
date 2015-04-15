@@ -381,6 +381,12 @@
 					+ "pie.innerHTML = NOMBRE + \" visita el Departamento de Computación!\";\n"
 					+ "var texto = nota.getElementsByTagName(\"a\")[6];\n"
 					+ "texto.innerHTML = NOMBRE + \" visitó la Semana de la Computación y le encantó! :D\";");
+		$("#copy-facebook").attr("data-clipboard-text", "var SRC = \"Voy a estudiar computacion!\"; <br> \n"
+					+ "var conv_window = document.getElementsByClassName(\"conversation\")[0];<br> \n"
+					+ "var conversations = conv_window.getElementsByClassName(\"_5wd4 _1nc7 direction_ltr _5yt9 _2cnu\");<br>\n"
+					+ "var last_conversation = conversations[conversations.length-1];<br>\n"
+					+ "last_conversation.getElementsByTagName(\"span\")[1].innerHTML = SRC;<br>\n");
+
 
 		var copy_volador_client = new ZeroClipboard($("#copy-volador"));
 		copy_volador_client.on( "ready", function( readyEvent ) {
@@ -392,6 +398,13 @@
 		var copy_noticias_client = new ZeroClipboard($("#copy-noticias"));
 		copy_noticias_client.on( "ready", function( readyEvent ) {
 		  copy_noticias_client.on( "aftercopy", function( event ) {
+		    alert("Copied text to clipboard: " + event.data["text/plain"] );
+		  });
+		});
+
+		var copy_facebook_client = new ZeroClipboard($("#copy-facebook"));
+		copy_facebook_client.on( "ready", function( readyEvent ) {
+		  copy_facebook_client.on( "aftercopy", function( event ) {
 		    alert("Copied text to clipboard: " + event.data["text/plain"] );
 		  });
 		});
