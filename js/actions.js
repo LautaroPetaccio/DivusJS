@@ -15,6 +15,20 @@ $(document).ready(function() {
       	}
     });
 
+    $("#copied-dialog").dialog({
+      modal: true,
+      show: false,
+      autoOpen: false,
+      draggable: false,
+      resizable: false,
+      minWidth: 450,
+      buttons: {
+        Ok: function() {
+          $(this).dialog("close");
+        }
+      }
+    });
+
 	$("#inicio_button").click(function() {
 		$('html, body').animate({
 		    scrollTop: $("#entry-inicio").offset().top
@@ -66,3 +80,7 @@ $(document).ready(function() {
 		}, 1000);
 	});
 });
+
+function show_copied_dialog() {
+	$("#copied-dialog").dialog('open');
+}
