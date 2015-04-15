@@ -397,7 +397,8 @@
 		$("#copy-gravity").attr("data-clipboard-text", "var script = document.createElement(\"script\");\n"
 					+ "script.src=\"https://gravityscript.googlecode.com/svn/trunk/gravityscript.js\";\n"
 					+ "document.body.appendChild(script);void(0);");
-
+		$("#copy-twitter").attr("data-clipboard-text", "document.getElementsByClassName(\""
+					+ "ProfileTweet-text js-tweet-text u-dir\")[0].innerHTML = \"Aguante la Semana de la Computación!\";");
 
 		var copy_volador_client = new ZeroClipboard($("#copy-volador"));
 		copy_volador_client.on( "ready", function( readyEvent ) {
@@ -430,6 +431,13 @@
 		var copy_gravity_client = new ZeroClipboard($("#copy-gravity"));
 		copy_gravity_client.on( "ready", function( readyEvent ) {
 		  copy_gravity_client.on( "aftercopy", function( event ) {
+		    alert("Copied text to clipboard: " + event.data["text/plain"] );
+		  });
+		});
+
+		var copy_twitter_client = new ZeroClipboard($("#copy-twitter"));
+		copy_twitter_client.on( "ready", function( readyEvent ) {
+		  copy_twitter_client.on( "aftercopy", function( event ) {
 		    alert("Copied text to clipboard: " + event.data["text/plain"] );
 		  });
 		});
