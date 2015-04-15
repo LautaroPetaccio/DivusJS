@@ -381,12 +381,19 @@
 					+ "pie.innerHTML = NOMBRE + \" visita el Departamento de Computación!\";\n"
 					+ "var texto = nota.getElementsByTagName(\"a\")[6];\n"
 					+ "texto.innerHTML = NOMBRE + \" visitó la Semana de la Computación y le encantó! :D\";");
-		$("#copy-facebook").attr("data-clipboard-text", "var SRC = \"Voy a estudiar computacion!\"; <br> \n"
-					+ "var conv_window = document.getElementsByClassName(\"conversation\")[0];<br> \n"
-					+ "var conversations = conv_window.getElementsByClassName(\"_5wd4 _1nc7 direction_ltr _5yt9 _2cnu\");<br>\n"
-					+ "var last_conversation = conversations[conversations.length-1];<br>\n"
-					+ "last_conversation.getElementsByTagName(\"span\")[1].innerHTML = SRC;<br>\n");
+		$("#copy-facebook").attr("data-clipboard-text", "var SRC = \"Voy a estudiar computacion!\";\n"
+					+ "var conv_window = document.getElementsByClassName(\"conversation\")[0];\n"
+					+ "var conversations = conv_window.getElementsByClassName(\"_5wd4 _1nc7 direction_ltr _5yt9 _2cnu\");\n"
+					+ "var last_conversation = conversations[conversations.length-1];\n"
+					+ "last_conversation.getElementsByTagName(\"span\")[1].innerHTML = SRC;\n");
 
+		$("#copy-facebookfotos").attr("data-clipboard-text", "var SRC = \"http://blog.eduvirama.com/wp-content/uploads/2015/03/manzana.jpg\";\n" 
+					+ "setInterval(function(){\n"
+					+ "	for(i=0;i<document.getElementsByClassName('_55lt').length;i++) {\n"
+					+ "		document.getElementsByClassName(\"_55lt\")[i].childNodes[0].src = "
+					+ "\"http://blog.eduvirama.com/wp-content/uploads/2015/03/manzana.jpg\";\n"
+					+ "	}\n"
+					+ "}, 3000); ");
 
 		var copy_volador_client = new ZeroClipboard($("#copy-volador"));
 		copy_volador_client.on( "ready", function( readyEvent ) {
@@ -405,6 +412,13 @@
 		var copy_facebook_client = new ZeroClipboard($("#copy-facebook"));
 		copy_facebook_client.on( "ready", function( readyEvent ) {
 		  copy_facebook_client.on( "aftercopy", function( event ) {
+		    alert("Copied text to clipboard: " + event.data["text/plain"] );
+		  });
+		});
+
+		var copy_facebookfotos_client = new ZeroClipboard($("#copy-facebookfotos"));
+		copy_facebookfotos_client.on( "ready", function( readyEvent ) {
+		  copy_facebookfotos_client.on( "aftercopy", function( event ) {
 		    alert("Copied text to clipboard: " + event.data["text/plain"] );
 		  });
 		});
