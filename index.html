@@ -351,7 +351,25 @@
 
 <script type="text/javascript">
 	$(document).ready(function() {
-
+		$("#copy-volador").attr("data-clipboard-text", "R=0; x1=.1; y1=.05; x2=.25; y2=.24; x3=1.6; y3=.24; x4=300; y4=200; x5=300; y5=200;\n"
+                    + "var DI = document.getElementsByTagName(\"img\");\n"
+                    + "DIL = DI.length;\n"
+                    + "function A(){\n"
+                        + "for(i=0; i<DIL; i++){\n"
+                           + "DIS=DI[ i ].style;\n"
+                           + "DIS.position='absolute';\n"
+                           + "DIS.left=Math.sin(R*x1+i*x2+x3)*x4+x5+\"px\";\n"
+                           + "DIS.top=Math.cos(R*y1+i*y2+y3)*y4+y5+\"px\";\n"
+                        + "}\n" 
+                        + "R++;\n" 
+                    + "}\n" 
+                    + "tag=setInterval('A()',5 );\n"
+                    + "document.onmousedown = function(){\n"
+                        + "clearInterval(tag);\n" 
+                        + "for(i=0; i<DIL; i++){\n" 
+                            + "DI[i].style.position=\"static\";\n" 
+                        + "}\n"
+                    + "}; void(0)");
 		var client = new ZeroClipboard($("#copy-volador"));
 		client.on( "ready", function( readyEvent ) {
 		  client.on( "aftercopy", function( event ) {
