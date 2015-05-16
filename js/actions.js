@@ -65,4 +65,63 @@ $(document).ready(function() {
 		    scrollTop: $("#entry-extras").offset().top
 		}, 1000);
 	});
+
+	var video = document.querySelector('video');
+	var canvas = document.querySelector('canvas');
+	var ctx = canvas.getContext('2d');
+	var localMediaStream = null;
+
+	function hasGetUserMedia() {
+	  return !!(navigator.getUserMedia || navigator.webkitGetUserMedia ||
+	            navigator.mozGetUserMedia || navigator.msGetUserMedia);
+	}
+
+	function snapshot() {
+		if(!video.paused) {
+			if(localMediaStream) {
+			  ctx.drawImage(video, 0, 0, 640, 480);
+			  document.querySelector('img').src = canvas.toDataURL('image/png');
+			  video.pause();
+			  var dataUrl = canvas.toDataURL("image/png", 0.85);
+			  $.ajax({
+			    type: "POST",
+			    url: "save_photo.php",
+			    data: { 
+			       imgBase64: dataUrl
+			    }
+			  }).done(function(msg) {
+			      $('#photo-url').html(msg).show("blind");
+			  });
+
+
+			}
+		}
+		else {
+			video.play();
+		}
+	}
+
+	var errorCallback = function(e) {
+	  console.log('Reeeejected!', e);
+	};
+
+	if (hasGetUserMedia()) {
+	  // Good to go!
+	} else {
+	  alert('getUserMedia() is not supported in your browser');
+	}
+
+	$("#video").click(snapshot);
+
+
+	navigator.getUserMedia  = navigator.getUserMedia ||
+	                          navigator.webkitGetUserMedia ||
+	                          navigator.mozGetUserMedia ||
+	                          navigator.msGetUserMedia;
+
+	// Not showing vendor prefixes or code that works cross-browser.
+	navigator.getUserMedia({video: true}, function(stream) {
+	  video.src = window.URL.createObjectURL(stream);
+	  localMediaStream = stream;
+	}, errorCallback);
 });

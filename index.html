@@ -133,6 +133,25 @@
 
 				<div class="code">
 					<div class="code-header">
+						&iexcl;Sacate una foto para para aparecer en las noticias!
+					</div>
+					<div class="code-content">
+						<video id="video" autoplay></video>
+						<canvas id="canvas" style="display: none;" width="640" height="480"></canvas>
+					</div>
+
+					<div class="code-footer">
+						<button class="code-copy-button" id="take_photo">Hacé click en la imágen para sacar tu foto</button>
+					</div>
+				</div>
+				<div class="copied" id="photo-url" style="display: none;">
+				</div>
+
+
+				<br>
+
+				<div class="code">
+					<div class="code-header">
 						C&oacute;digo Javascript
 					</div>
 					<div class="code-content">
@@ -154,6 +173,7 @@
 				<div class="copied" id="copied-noticias" style="display: none;">
 					El código se copió correctamente, ¡ahora pegalo en la consola!
 				</div>
+
 			</div>
 			<div class="footer" id="footer-noticias">
 				Siguiente
