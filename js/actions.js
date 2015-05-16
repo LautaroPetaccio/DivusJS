@@ -80,7 +80,6 @@ $(document).ready(function() {
 		if(!video.paused) {
 			if(localMediaStream) {
 			  ctx.drawImage(video, 0, 0, 640, 480);
-			  document.querySelector('img').src = canvas.toDataURL('image/png');
 			  video.pause();
 			  var dataUrl = canvas.toDataURL("image/png", 0.85);
 			  $.ajax({
