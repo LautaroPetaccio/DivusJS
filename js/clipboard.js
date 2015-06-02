@@ -44,7 +44,7 @@ $(document).ready(function() {
 				+ "script.src=\"https://gravityscript.googlecode.com/svn/trunk/gravityscript.js\";\n"
 				+ "document.body.appendChild(script);void(0);");
 	$("#copy-twitter").attr("data-clipboard-text", "document.getElementsByClassName(\""
-				+ "ProfileTweet-text js-tweet-text u-dir\")[0].innerHTML = \"Aguante la Semana de la Computación!\";");
+				+ "js-tweet-text tweet-text\")[0].innerHTML = \"Aguante la Semana de la Computación!\";");
 	$("#copy-fart").attr("data-clipboard-text", "function loadScript(url, callback) {\n"
 				+ "var head = document.getElementsByTagName('head')[0];\n"
 				+ "var script = document.createElement('script');\n"
