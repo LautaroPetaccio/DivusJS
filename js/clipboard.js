@@ -18,7 +18,7 @@ $(document).ready(function() {
                         + "DI[i].style.position=\"static\";\n" 
                     + "}\n"
                 + "}; void(0)");
-	$("#copy-noticias").attr("data-clipboard-text", "var SRC = \"http://www.dinosoria.com/tiger/tigre_sumatracc01.jpg\";\n"
+	$("#copy-noticias").attr("data-clipboard-text", "var SRC = \"http://divulga.exp.dc.uba.ar/~divus/imgs/dcphoto.png\";\n"
 				+ "var NOMBRE = \"Tu nombre\";\n"
 				+ "var nota = document.body.getElementsByClassName(\"nota\")[0];\n"
 				+ "var foto = nota.getElementsByTagName(\"img\")[0];\n"
