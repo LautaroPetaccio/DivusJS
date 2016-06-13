@@ -1,5 +1,8 @@
 # DivusJS
-Javascript stand for the computer science week.
+Stand de Javascript y desarrollo web para la SdC
 
-The imgs folder must have write permissions to save the webcam photos.
+### Instalación
+- Ejecutar: *npm install*
 
+### Uso
+- Ejectuar: *node index.js*
