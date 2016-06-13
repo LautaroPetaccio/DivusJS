@@ -1,20 +1,19 @@
 <!DOCTYPE html>
 <html>
-<header>
+<head>
 	<meta charset="UTF-8">
-	<link rel="stylesheet" href="jquery-ui/jquery-ui.css">
+	<link rel="stylesheet" href="js/jquery-ui/jquery-ui.css">
 	<link rel="stylesheet" href="css/style.css">
-	<script src="jquery-ui/external/jquery/jquery.js"></script>
-	<script src="jquery-ui/jquery-ui.js"></script>
+	<script src="js/jquery-ui/external/jquery/jquery.js"></script>
+	<script src="js/jquery-ui/jquery-ui.js"></script>
 	<script type="text/javascript" src="js/ZeroClipboard.js"></script>
 	<script type="text/javascript" src="js/clipboard.js"></script>
 	<script type="text/javascript" src="js/actions.js"></script>
-	<link href='http://fonts.googleapis.com/css?family=Handlee' rel='stylesheet' type='text/css'>
-</header>
+</head>
 
 <body>
 	<div id="welcome">
-		<img id="logo" src="logo_dc.png">
+		<img id="logo" src="imgs/logo_dc.png">
 		<img id="welcome_message" src="imgs/titulo.png">
 		<div id="button_wrapper">
 			<p id="inicio_button">
@@ -251,162 +250,155 @@
 	</div>
 
 	<div class="entry-wrapper" id="entry-gravity">
-			<div class="new-entry">
-				<div class="entry-header">
-						La ley de la gravedad, &iquest;tambi&eacute;n en la web?
-				</div>
-				<div class="content">
+		<div class="new-entry">
+			<div class="entry-header">
+					La ley de la gravedad, &iquest;tambi&eacute;n en la web?
+			</div>
+			<div class="content">
 
-					<p> &iquest;Hacia d&oacute;nde se van los elementos de la web cuando se les agrega masa gravitacional? Peg&aacute; este c&oacute;digo en la p&aacute;gina que m&aacute;s te guste y descubrilo.</p>
+				<p> &iquest;Hacia d&oacute;nde se van los elementos de la web cuando se les agrega masa gravitacional? Peg&aacute; este c&oacute;digo en la p&aacute;gina que m&aacute;s te guste y descubrilo.</p>
 
-					<div class="code">
-						<div class="code-header">
-							C&oacute;digo Javascript
-						</div>
-						<div class="code-content">
-							var script = document.createElement("script");<br>
-							script.src="https://gravityscript.googlecode.com/svn/trunk/gravityscript.js";<br>
-							document.body.appendChild(script);<br>
-							void(0);<br>
-						</div>
-						<div class="code-footer">
-							<button class="code-copy-button" id="copy-gravity" data-clipboard-text="Copy Me!">Copiar al portapapeles</button>
-						</div>
-
+				<div class="code">
+					<div class="code-header">
+						C&oacute;digo Javascript
 					</div>
-				<div class="copied" id="copied-gravity" style="display: none;">
-					El código se copió correctamente, ¡ahora pegalo en la consola!
+					<div class="code-content">
+						var script = document.createElement("script");<br>
+						script.src="https://gravityscript.googlecode.com/svn/trunk/gravityscript.js";<br>
+						document.body.appendChild(script);<br>
+						void(0);<br>
+					</div>
+					<div class="code-footer">
+						<button class="code-copy-button" id="copy-gravity" data-clipboard-text="Copy Me!">Copiar al portapapeles</button>
+					</div>
+
 				</div>
-				</div>
-				<div class="footer" id="footer-gravity">
-				Siguiente
-				</div>
+			<div class="copied" id="copied-gravity" style="display: none;">
+				El código se copió correctamente, ¡ahora pegalo en la consola!
+			</div>
+			</div>
+			<div class="footer" id="footer-gravity">
+			Siguiente
 			</div>
 		</div>
+	</div>
 
 
 	<div class="entry-wrapper" id="entry-twitter">
-			<div class="new-entry">
-				<div class="entry-header">
-					&iquest;Qu&eacute; opina tu famoso favorito?	
-				</div>
-				<div class="content">
+		<div class="new-entry">
+			<div class="entry-header">
+				&iquest;Qu&eacute; opina tu famoso favorito?	
+			</div>
+			<div class="content">
 
-					<p> La mayor&iacute;a de los famosos usa Twitter con mucha frecuencia, &iquest;te imagin&aacute;s modificando sus opiniones?<br>
-					Abr&iacute; la p&aacute;gina de Twitter de la persona que quieras, cambi&aacute; lo que est&aacute; entre comillas del c&oacute;digo como m&aacute;s te guste, pegalo en la consola y fijate qu&eacute; ocurre!
-					</p>
+				<p> La mayor&iacute;a de los famosos usa Twitter con mucha frecuencia, &iquest;te imagin&aacute;s modificando sus opiniones?<br>
+				Abr&iacute; la p&aacute;gina de Twitter de la persona que quieras, cambi&aacute; lo que est&aacute; entre comillas del c&oacute;digo como m&aacute;s te guste, pegalo en la consola y fijate qu&eacute; ocurre!
+				</p>
 
-					<div class="code">
-						<div class="code-header">
-							C&oacute;digo Javascript
-						</div>
-						<div class="code-content">
-							document.getElementsByClassName("js-tweet-text tweet-text")[0].innerHTML = "Aguante la Semana de la Computaci&oacute;n!";
-						</div>
-						<div class="code-footer">
-							<button class="code-copy-button" id="copy-twitter" data-clipboard-text="Copy Me!">Copiar al portapapeles</button>
-						</div>
-
+				<div class="code">
+					<div class="code-header">
+						C&oacute;digo Javascript
 					</div>
-				<div class="copied" id="copied-twitter" style="display: none;">
+					<div class="code-content">
+						document.getElementsByClassName("js-tweet-text tweet-text")[0].innerHTML = "Aguante la Semana de la Computaci&oacute;n!";
+					</div>
+					<div class="code-footer">
+						<button class="code-copy-button" id="copy-twitter" data-clipboard-text="Copy Me!">Copiar al portapapeles</button>
+					</div>
+
+				</div>
+			<div class="copied" id="copied-twitter" style="display: none;">
+				El código se copió correctamente, ¡ahora pegalo en la consola!
+			</div>
+			</div>
+			<div class="footer" id="footer-twitter">
+			Siguiente
+			</div>
+		</div>
+	</div>
+
+	<div class="entry-wrapper" id="entry-fart">
+		<div class="new-entry">
+			<div class="entry-header">
+				Un poco de m&uacute;sica para los o&iacute;dos	
+			</div>
+			<div class="content">
+
+				<p> Sub&iacute; el volumen de los parlantes y abr&iacute; tu p&aacute;gina preferida. Copiando esta simple l&iacute;nea de c&oacute;digo no vas a poder creer lo que pasa...
+				</p>
+
+				<div class="code">
+					<div class="code-header">
+						C&oacute;digo Javascript
+					</div>
+					<div class="code-content">
+						function loadScript(url, callback) {<br>
+						&emsp;var head = document.getElementsByTagName('head')[0];<br>
+						&emsp;var script = document.createElement('script');<br>
+						&emsp;script.type = 'text/javascript';<br>
+						&emsp;script.src = url;<br>
+						&emsp;script.onreadystatechange = callback;<br>
+						&emsp;script.onload = callback;<br>
+						&emsp;head.appendChild(script);<br>
+						}<br>
+
+						function loadFarts() {<br>
+						&emsp;fartscroll(800);<br>
+						}<br>
+
+
+						loadScript("https://rawgit.com/theonion/fartscroll.js/master/fartscroll.js", loadFarts);<br>
+					</div>
+					<div class="code-footer">
+						<button class="code-copy-button" id="copy-fart" data-clipboard-text="Copy Me!">Copiar al portapapeles</button>
+					</div>
+
+				</div>
+				<div class="copied" id="copied-fart" style="display: none;">
 					El código se copió correctamente, ¡ahora pegalo en la consola!
 				</div>
-				</div>
-				<div class="footer" id="footer-twitter">
-				Siguiente
-				</div>
+			</div>
+			<div class="footer" id="footer-fart">
+			Siguiente
 			</div>
 		</div>
+	</div>
 
-		<div class="entry-wrapper" id="entry-fart">
-			<div class="new-entry">
-				<div class="entry-header">
-					Un poco de m&uacute;sica para los o&iacute;dos	
-				</div>
-				<div class="content">
+	<div class="entry-wrapper" id="entry-extras">
+		<div class="new-entry">
+			<div class="entry-header">
+				Algunos extras de Google y Youtube	
+			</div>
+			<div class="content">
 
-					<p> Sub&iacute; el volumen de los parlantes y abr&iacute; tu p&aacute;gina preferida. Copiando esta simple l&iacute;nea de c&oacute;digo no vas a poder creer lo que pasa...
-					</p>
+				<p> Google tiene muchas funciones secretas. Entre ellas, se pueden buscar algunas palabras claves que ejecutan comandos. Abr&iacute; la p&aacute;gina de Google y la de YouTube y busc&aacute; lo siguiente:
+				</p>
 
-					<div class="code">
-						<div class="code-header">
-							C&oacute;digo Javascript
-						</div>
-						<div class="code-content">
-							function loadScript(url, callback) {<br>
-							&emsp;var head = document.getElementsByTagName('head')[0];<br>
-							&emsp;var script = document.createElement('script');<br>
-							&emsp;script.type = 'text/javascript';<br>
-							&emsp;script.src = url;<br>
-							&emsp;script.onreadystatechange = callback;<br>
-							&emsp;script.onload = callback;<br>
-							&emsp;head.appendChild(script);<br>
-							}<br>
-
-							function loadFarts() {<br>
-							&emsp;fartscroll(800);<br>
-							}<br>
-
-
-							loadScript("https://rawgit.com/theonion/fartscroll.js/master/fartscroll.js", loadFarts);<br>
-						</div>
-						<div class="code-footer">
-							<button class="code-copy-button" id="copy-fart" data-clipboard-text="Copy Me!">Copiar al portapapeles</button>
-						</div>
+				<div class="code">
+					<div class="code-header">
+						B&uacute;squeda en Google
+					</div>
+					<div class="code-content">
+						Atari breakout<br>
+						Do a barrell roll<br>
+						Zerg rush<br>
+						the answer to life the universe and everything
 
 					</div>
-					<div class="copied" id="copied-fart" style="display: none;">
-						El código se copió correctamente, ¡ahora pegalo en la consola!
+					<div class="code-header">
+						B&uacute;squeda en YouTube
 					</div>
-				</div>
-				<div class="footer" id="footer-fart">
-				Siguiente
+					<div class="code-content">
+						do the harlem shake<br>
+						use the force luke<br>
+						Beam me up Scotty<br>
+						doge meme
+					</div>
 				</div>
 			</div>
+			Para descubrir un poco m&aacute;s <a href="url">http://elgoog.im/</a>
 		</div>
-
-		<div class="entry-wrapper" id="entry-extras">
-			<div class="new-entry">
-				<div class="entry-header">
-					Algunos extras de Google y Youtube	
-				</div>
-				<div class="content">
-
-					<p> Google tiene muchas funciones secretas. Entre ellas, se pueden buscar algunas palabras claves que ejecutan comandos. Abr&iacute; la p&aacute;gina de Google y la de YouTube y busc&aacute; lo siguiente:
-					</p>
-
-					<div class="code">
-						<div class="code-header">
-							B&uacute;squeda en Google
-						</div>
-						<div class="code-content">
-							Atari breakout<br>
-							Do a barrell roll<br>
-							Zerg rush<br>
-							the answer to life the universe and everything
-
-						</div>
-						<div class="code-header">
-							B&uacute;squeda en YouTube
-						</div>
-						<div class="code-content">
-							do the harlem shake<br>
-							use the force luke<br>
-							Beam me up Scotty<br>
-							doge meme
-						</div>
-					</div>
-				</div>
-				Para descubrir un poco m&aacute;s <a href="url">http://elgoog.im/</a>
-			</div>
-		</div>
-
-		<div id="copied-dialog" title="Copiado">
-		  <p>
-		    <span class="ui-icon ui-icon-clipboard" style="float:left; margin:0 7px 50px 0;"></span>
-		    El código se copió correctamente, ¡ahora pegalo en la consola!
-		  </p>
-		</div>
+	</div>
 
 </body>
 
