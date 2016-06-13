@@ -154,15 +154,17 @@
 						C&oacute;digo Javascript
 					</div>
 					<div class="code-content">
-						<span title="Localizacion de la imagen a usar."> var SRC = "http://divulga.exp.dc.uba.ar/~divus/imgs/dcphoto.png";</span><br>
-						<span title="Tu nombre."> var NOMBRE = "Tu nombre"; </span> <br>
-						<span title="Conseguimos la primera noticia."> var nota = document.body.getElementsByClassName("nota")[0]; </span><br>
-						<span title="Conseguimos la foto de la noticia.">var foto = nota.getElementsByTagName("img")[0];</span><br>
+						<span title="Localizacion de la imagen a usar.">var SRC = "http://localhost:3000/imgs/dcphoto.png";</span><br>
+						<span title="Tu nombre.">var NOMBRE = "Tu nombre";</span> <br>
+						<span title="Conseguimos la primera noticia.">var primerArticulo = document.getElementsByTagName("article")[1];</span><br>
+						<span title="Conseguimos la foto de la noticia.">var foto = primerArticulo.getElementsByTagName("img")[0];</span><br>
 						<span title="Cambiamos la direccion de la foto por la de SRC.">foto.src = SRC;</span><br>
-						<span title="Conseguimos el pie de pagina.">var pie = nota.getElementsByTagName("a")[2];</span><br>
+						<span title="Conseguimos el pie de pagina.">var pie = primerArticulo.getElementsByClassName("bajada")[0];</span><br>
 						<span title="Cambiamos el pie de pagina.">pie.innerHTML = "¡" + NOMBRE + " visita el Departamento de Computaci&oacute;n!";</span><br>
-						<span title="Conseguimos el texto de la noticia.">var texto = nota.getElementsByTagName("a")[6];</span><br>
+						<span title="Conseguimos el texto de la noticia.">var texto = primerArticulo.getElementsByClassName("f-linkNota")[0];</span><br>
 						<span title="Cambiamos el texto de la noticia.">texto.innerHTML = "¡" + NOMBRE + " visit&oacute; la Semana de la Computaci&oacute;n y le encant&oacute;! :D";</span><br>
+						<span title="Conseguimos el sub-encabezado">var subEncabezado = primerArticulo.getElementsByTagName("h3")[0];</span><br>
+						<span title="Cambiamos el sub-encabezado">subEncabezado.innerHTML = "Visita a la SdC"</span><br>
 					</div>
 
 					<div class="code-footer">

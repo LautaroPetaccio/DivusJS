@@ -18,15 +18,17 @@ $(document).ready(function() {
                         + "DI[i].style.position=\"static\";\n" 
                     + "}\n"
                 + "}; void(0)");
-	$("#copy-noticias").attr("data-clipboard-text", "var SRC = \"http://divulga.exp.dc.uba.ar/~divus/imgs/dcphoto.png\";\n"
+	$("#copy-noticias").attr("data-clipboard-text", "var SRC = \"http://localhost:3000/imgs/dcphoto.png\";\n"
 				+ "var NOMBRE = \"Tu nombre\";\n"
-				+ "var nota = document.body.getElementsByClassName(\"nota\")[0];\n"
-				+ "var foto = nota.getElementsByTagName(\"img\")[0];\n"
+				+ "var primerArticulo = document.getElementsByTagName(\"article\")[1];\n"
+				+ "var foto = primerArticulo.getElementsByTagName(\"img\")[0];\n"
 				+ "foto.src = SRC;\n"
-				+ "var pie = nota.getElementsByTagName(\"a\")[2];\n"
+				+ "var pie = primerArticulo.getElementsByClassName(\"bajada\")[0];\n"
 				+ "pie.innerHTML = \"¡\" + NOMBRE + \" visita el Departamento de Computación!\";\n"
-				+ "var texto = nota.getElementsByTagName(\"a\")[6];\n"
-				+ "texto.innerHTML = \"¡\" + NOMBRE + \" visitó la Semana de la Computación y le encantó! :D\";");
+				+ "var texto = primerArticulo.getElementsByClassName(\"f-linkNota\")[0];\n"
+				+ "texto.innerHTML = \"¡\" + NOMBRE + \" visitó la Semana de la Computación y le encantó! :D\";\n"
+				+ "var subEncabezado = primerArticulo.getElementsByTagName(\"h3\")[0];\n"
+				+ "subEncabezado.innerHTML = \"Visita a la SdC\";\n");
 	$("#copy-facebook").attr("data-clipboard-text", "var SRC = \"Voy a estudiar computacion!\";\n"
 				+ "var conv_window = document.getElementsByClassName(\"conversation\")[0];\n"
 				+ "var conversations = conv_window.getElementsByClassName(\"_5wd4 _1nc7 direction_ltr _5yt9 _2cnu\");\n"
