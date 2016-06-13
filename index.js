@@ -16,7 +16,6 @@ app.get('/', function (req, res) {
 
 app.post('/save_photo', function (req, res) {
     var imgBase64 = new Buffer(req.body.imgBase64.replace(/^data:image\/\w+;base64,/, ""), 'base64');
-    console.log(imgBase64);
     fs.writeFileSync('imgs/dcphoto.png', imgBase64);
     res.send('http://localhost:3000/imgs/dcphoto.png');
 });
