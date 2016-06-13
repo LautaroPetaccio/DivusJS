@@ -1,0 +1,24 @@
+{
+  "name": "stand-javascript-sdc",
+  "version": "1.0.0",
+  "description": "Stand de Javascript para la SdC",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lausuper/DivusJS.git"
+  },
+  "author": "Lautaro Petaccio",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/lausuper/DivusJS/issues"
+  },
+  "homepage": "https://github.com/lausuper/DivusJS#readme",
+  "dependencies": {
+    "body-parser": "^1.15.1",
+    "express": "^4.13.4",
+    "opener": "^1.4.1"
+  }
+}
