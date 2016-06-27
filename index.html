@@ -196,11 +196,10 @@
 						C&oacute;digo Javascript
 					</div>
 					<div class="code-content">
-						var SRC = "Voy a estudiar computacion!"; <br>
-						var conv_window = document.getElementsByClassName("conversation")[0];<br>
-						var conversations = conv_window.getElementsByClassName("_5wd4 _1nc7 direction_ltr _5yt9 _2cnu");<br>
-						var last_conversation = conversations[conversations.length-1];<br>
-						last_conversation.getElementsByTagName("span")[1].innerHTML = SRC;<br>
+						var MENSAJE = "Voy a estudiar computacion!";<br>
+						var conversaciones = document.getElementsByClassName("_5yl5");<br>
+						var ultima_conversacion = conversaciones[conversaciones.length-1];<br>
+						ultima_conversacion.innerHTML = MENSAJE;<br>
 					</div>
 					<div class="code-footer">
 						<button class="code-copy-button" id="copy-facebook" data-clipboard-text="Copy Me!">Copiar al portapapeles</button>
@@ -230,10 +229,10 @@
 						C&oacute;digo Javascript
 					</div>
 					<div class="code-content">
-						var SRC = &quot;http://blog.eduvirama.com/wp-content/uploads/2015/03/manzana.jpg&quot;; <br>
+						var SRC = &quot;https://www.dc.uba.ar/header/search_box/logo_uba.png&quot;; <br>
 						setInterval(function(){<br>
 						&emsp;for(i=0;i&lt;document.getElementsByClassName('_55lt').length;i++) { <br>
-						&emsp;&emsp;document.getElementsByClassName(&quot;_55lt&quot;)[i].childNodes[0].src = &quot;http://blog.eduvirama.com/wp-content/uploads/2015/03/manzana.jpg&quot;;<br>
+						&emsp;&emsp;document.getElementsByClassName(&quot;_55lt&quot;)[i].childNodes[0].src = SRC;<br>
 						&emsp;}<br>
 						}, 3000); <br>
 					</div>
@@ -266,9 +265,9 @@
 					</div>
 					<div class="code-content">
 						var script = document.createElement("script");<br>
-						script.src="https://gravityscript.googlecode.com/svn/trunk/gravityscript.js";<br>
+						script.src="https://raw.githubusercontent.com/tinybigideas/jGravity/master/jGravity-min.js";<br>
 						document.body.appendChild(script);<br>
-						void(0);<br>
+						$('body').jGravity();<br>
 					</div>
 					<div class="code-footer">
 						<button class="code-copy-button" id="copy-gravity" data-clipboard-text="Copy Me!">Copiar al portapapeles</button>
@@ -381,8 +380,9 @@
 						B&uacute;squeda en Google
 					</div>
 					<div class="code-content">
-						Atari breakout<br>
-						Do a barrell roll<br>
+						askew<br>
+						Atari breakout (Google images)<br>
+						Do a barrel roll<br>
 						Zerg rush<br>
 						the answer to life the universe and everything
 
@@ -393,7 +393,6 @@
 					<div class="code-content">
 						do the harlem shake<br>
 						use the force luke<br>
-						Beam me up Scotty<br>
 						doge meme
 					</div>
 				</div>

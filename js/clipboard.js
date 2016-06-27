@@ -29,17 +29,14 @@ $(document).ready(function() {
 				+ "texto.innerHTML = \"¡\" + NOMBRE + \" visitó la Semana de la Computación y le encantó! :D\";\n"
 				+ "var subEncabezado = primerArticulo.getElementsByTagName(\"h3\")[0];\n"
 				+ "subEncabezado.innerHTML = \"Visita a la SdC\";\n");
-	$("#copy-facebook").attr("data-clipboard-text", "var SRC = \"Voy a estudiar computacion!\";\n"
-				+ "var conv_window = document.getElementsByClassName(\"conversation\")[0];\n"
-				+ "var conversations = conv_window.getElementsByClassName(\"_5wd4 _1nc7 direction_ltr _5yt9 _2cnu\");\n"
-				+ "var last_conversation = conversations[conversations.length-1];\n"
-				+ "last_conversation.getElementsByTagName(\"span\")[1].innerHTML = SRC;\n");
-
-	$("#copy-facebookfotos").attr("data-clipboard-text", "var SRC = \"http://blog.eduvirama.com/wp-content/uploads/2015/03/manzana.jpg\";\n" 
+	$("#copy-facebook").attr("data-clipboard-text", "var MENSAJE = \"Voy a estudiar computacion!\";\n"
+				+ "var conversaciones = document.getElementsByClassName(\"_5yl5\");\n"
+				+ "var ultima_conversacion = conversaciones[conversaciones.length-1];\n"
+				+ "ultima_conversacion.innerHTML = MENSAJE;\n");
+	$("#copy-facebookfotos").attr("data-clipboard-text", "var SRC = \"https://www.dc.uba.ar/header/search_box/logo_uba.png\";\n" 
 				+ "setInterval(function(){\n"
 				+ "	for(i=0;i<document.getElementsByClassName('_55lt').length;i++) {\n"
-				+ "		document.getElementsByClassName(\"_55lt\")[i].childNodes[0].src = "
-				+ "\"http://blog.eduvirama.com/wp-content/uploads/2015/03/manzana.jpg\";\n"
+				+ "		document.getElementsByClassName(\"_55lt\")[i].childNodes[0].src = SRC;\n"
 				+ "	}\n"
 				+ "}, 3000); ");
 	$("#copy-gravity").attr("data-clipboard-text", "var script = document.createElement(\"script\");\n"
