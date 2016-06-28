@@ -29,8 +29,8 @@ $(document).ready(function() {
 	$("#footer-volador").click(scrollTo("#entry-noticias"));
 	$("#footer-noticias").click(scrollTo("#entry-facebook"));
 	$("#footer-facebook").click(scrollTo("#entry-facebookfotos"));
-	$("#footer-facebookfotos").click(scrollTo("#entry-gravity"));
-	$("#footer-gravity").click(scrollTo("#entry-twitter"));
+	$("#footer-facebookfotos").click(scrollTo("#entry-twitter"));
+	//$("#footer-gravity").click(scrollTo("#entry-twitter"));
 	$("#footer-twitter").click(scrollTo("#entry-fart"));
 	$("#footer-fart").click(scrollTo("#entry-extras"));
 

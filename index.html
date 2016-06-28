@@ -2,13 +2,16 @@
 <html>
 <head>
 	<meta charset="UTF-8">
+	<title>Semana de la computación - 2016</title>
 	<link rel="stylesheet" href="js/jquery-ui/jquery-ui.css">
 	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/prism.css">
 	<script src="js/jquery-ui/external/jquery/jquery.js"></script>
 	<script src="js/jquery-ui/jquery-ui.js"></script>
 	<script type="text/javascript" src="js/ZeroClipboard.js"></script>
 	<script type="text/javascript" src="js/clipboard.js"></script>
 	<script type="text/javascript" src="js/actions.js"></script>
+	<script type="text/javascript" src="js/prism.js"></script>
 </head>
 
 <body>
@@ -86,25 +89,30 @@
 						C&oacute;digo Javascript
 					</div>
 					<div class="code-content">
-						R=0; x1=.1; y1=.05; x2=.25; y2=.24; x3=1.6; y3=.24; x4=300; y4=200; x5=300; y5=200; <br>
-						var DI = document.getElementsByTagName(&quot;img&quot;); <br>
-						DIL = DI.length; <br>
-						function A(){ <br>
-						&emsp;for(i=0; i&lt;DIL; i++){ <br>
-						&emsp;&emsp;DIS=DI[ i ].style; <br>
-						&emsp;&emsp;DIS.position='absolute'; <br>
-						&emsp;&emsp;DIS.left=Math.sin(R*x1+i*x2+x3)*x4+x5+&quot;px&quot;; <br>
-						&emsp;&emsp;DIS.top=Math.cos(R*y1+i*y2+y3)*y4+y5+&quot;px&quot;; <br>
-						&emsp;}
-						&emsp;R++; <br>
-						} <br>
-						tag=setInterval('A()',5 ); <br>
-						document.onmousedown = function(){ <br>
-						&emsp;clearInterval(tag); <br>
-						&emsp;for(i=0; i&lt;DIL; i++){ <br>
-						&emsp;&emsp;DI[i].style.position=&quot;static&quot;; <br>
-						&emsp;} <br>
-						}; void(0) <br>
+						<pre><code class="language-javascript">
+var R=0, x1=0.1, y1=0.05, x2=0.25, y2=0.24, x3=1.6, y3=0.24, x4=300, y4=200, x5=300, y5=200;
+var DI = document.getElementsByTagName("img");
+var DIL = DI.length;
+
+function A(){
+    for(var i=0; i < DIL; i++){
+        var DIS=DI[ i ].style;
+        DIS.position='absolute';
+        DIS.left=Math.sin(R*x1+i*x2+x3)*x4+x5+"px";
+        DIS.top=Math.cos(R*y1+i*y2+y3)*y4+y5+"px";
+    }
+    R++;
+}
+
+var tag = setInterval(A, 5);
+
+document.onmousedown = function() {
+    clearInterval(tag);
+    for(var i=0; i < DIL; i++) {
+        DI[i].style.position="static";
+    }
+};
+						</pre></code>
 					</div>
 					<div class="code-footer">
 						<button class="code-copy-button" id="copy-volador" data-clipboard-text="Copy Me!">Copiar al portapapeles</button>
@@ -154,17 +162,21 @@
 						C&oacute;digo Javascript
 					</div>
 					<div class="code-content">
-						<span title="Localizacion de la imagen a usar.">var SRC = "http://localhost:3000/imgs/dcphoto.png";</span><br>
-						<span title="Tu nombre.">var NOMBRE = "Tu nombre";</span> <br>
-						<span title="Conseguimos la primera noticia.">var primerArticulo = document.getElementsByTagName("article")[1];</span><br>
-						<span title="Conseguimos la foto de la noticia.">var foto = primerArticulo.getElementsByTagName("img")[0];</span><br>
-						<span title="Cambiamos la direccion de la foto por la de SRC.">foto.src = SRC;</span><br>
-						<span title="Conseguimos el pie de pagina.">var pie = primerArticulo.getElementsByClassName("bajada")[0];</span><br>
-						<span title="Cambiamos el pie de pagina.">pie.innerHTML = "¡" + NOMBRE + " visita el Departamento de Computaci&oacute;n!";</span><br>
-						<span title="Conseguimos el texto de la noticia.">var texto = primerArticulo.getElementsByClassName("f-linkNota")[0];</span><br>
-						<span title="Cambiamos el texto de la noticia.">texto.innerHTML = "¡" + NOMBRE + " visit&oacute; la Semana de la Computaci&oacute;n y le encant&oacute;! :D";</span><br>
-						<span title="Conseguimos el sub-encabezado">var subEncabezado = primerArticulo.getElementsByTagName("h3")[0];</span><br>
-						<span title="Cambiamos el sub-encabezado">subEncabezado.innerHTML = "Visita a la SdC"</span><br>
+						<pre>
+							<code class="language-javascript">
+var SRC = "http://localhost:3000/imgs/dcphoto.png";
+var NOMBRE = "Tu nombre";
+var primerArticulo = document.getElementsByTagName("article")[1];
+var foto = primerArticulo.getElementsByTagName("img")[0];
+foto.src = SRC;
+var pie = primerArticulo.getElementsByClassName("bajada")[0];
+pie.innerHTML = "¡" + NOMBRE + " visita el Departamento de Computación!";
+var texto = primerArticulo.getElementsByClassName("f-linkNota")[0];
+texto.innerHTML = "¡" + NOMBRE + " visitó la Semana de la Computación y le encantó! :D";
+var subEncabezado = primerArticulo.getElementsByTagName("h3")[0];
+subEncabezado.innerHTML = "Visita a la SdC";
+							</code>
+						</pre>
 					</div>
 
 					<div class="code-footer">
@@ -196,10 +208,12 @@
 						C&oacute;digo Javascript
 					</div>
 					<div class="code-content">
-						var MENSAJE = "Voy a estudiar computacion!";<br>
-						var conversaciones = document.getElementsByClassName("_5yl5");<br>
-						var ultima_conversacion = conversaciones[conversaciones.length-1];<br>
-						ultima_conversacion.innerHTML = MENSAJE;<br>
+						<pre><code class="language-javascript">
+var MENSAJE = "Voy a estudiar computacion!";
+var conversaciones = document.getElementsByClassName("_5yl5");
+var ultima_conversacion = conversaciones[conversaciones.length-1];
+ultima_conversacion.innerHTML = MENSAJE;
+					</code></pre>
 					</div>
 					<div class="code-footer">
 						<button class="code-copy-button" id="copy-facebook" data-clipboard-text="Copy Me!">Copiar al portapapeles</button>
@@ -229,12 +243,16 @@
 						C&oacute;digo Javascript
 					</div>
 					<div class="code-content">
-						var SRC = &quot;https://www.dc.uba.ar/header/search_box/logo_uba.png&quot;; <br>
-						setInterval(function(){<br>
-						&emsp;for(i=0;i&lt;document.getElementsByClassName('_55lt').length;i++) { <br>
-						&emsp;&emsp;document.getElementsByClassName(&quot;_55lt&quot;)[i].childNodes[0].src = SRC;<br>
-						&emsp;}<br>
-						}, 3000); <br>
+						<pre>
+							<code class="language-javascript">
+var SRC = "https://www.dc.uba.ar/header/search_box/logo_uba.png";
+setInterval(function(){
+	for(var i=0;i < document.getElementsByClassName('_55lt').length;i++) {
+		document.getElementsByClassName("_55lt")[i].childNodes[0].src = SRC;
+	}
+}, 3000);
+							</code>
+						</pre>
 					</div>
 					<div class="code-footer">
 						<button class="code-copy-button" id="copy-facebookfotos" data-clipboard-text="Copy Me!">Copiar al portapapeles</button>
@@ -250,7 +268,7 @@
 		</div>
 	</div>
 
-	<div class="entry-wrapper" id="entry-gravity">
+	<!--div class="entry-wrapper" id="entry-gravity">
 		<div class="new-entry">
 			<div class="entry-header">
 					La ley de la gravedad, &iquest;tambi&eacute;n en la web?
@@ -282,8 +300,7 @@
 			Siguiente
 			</div>
 		</div>
-	</div>
-
+	</div-->
 
 	<div class="entry-wrapper" id="entry-twitter">
 		<div class="new-entry">
@@ -301,7 +318,11 @@
 						C&oacute;digo Javascript
 					</div>
 					<div class="code-content">
-						document.getElementsByClassName("js-tweet-text tweet-text")[0].innerHTML = "Aguante la Semana de la Computaci&oacute;n!";
+						<pre>
+							<code class="language-javascript">
+document.getElementsByClassName("js-tweet-text tweet-text")[0].innerHTML = "Aguante la Semana de la Computación!";
+							</code>
+						</pre>
 					</div>
 					<div class="code-footer">
 						<button class="code-copy-button" id="copy-twitter" data-clipboard-text="Copy Me!">Copiar al portapapeles</button>
@@ -333,22 +354,26 @@
 						C&oacute;digo Javascript
 					</div>
 					<div class="code-content">
-						function loadScript(url, callback) {<br>
-						&emsp;var head = document.getElementsByTagName('head')[0];<br>
-						&emsp;var script = document.createElement('script');<br>
-						&emsp;script.type = 'text/javascript';<br>
-						&emsp;script.src = url;<br>
-						&emsp;script.onreadystatechange = callback;<br>
-						&emsp;script.onload = callback;<br>
-						&emsp;head.appendChild(script);<br>
-						}<br>
+						<pre>
+							<code class="language-javascript">
+function loadScript(url, callback) {
+	var head = document.getElementsByTagName('head')[0];
+	var script = document.createElement('script');
+	script.type = 'text/javascript';
+	script.src = url;
+	script.onreadystatechange = callback;
+	script.onload = callback;
+	head.appendChild(script);
+}
 
-						function loadFarts() {<br>
-						&emsp;fartscroll(800);<br>
-						}<br>
+function loadFarts() {
+	fartscroll(800);
+}
 
 
-						loadScript("https://rawgit.com/theonion/fartscroll.js/master/fartscroll.js", loadFarts);<br>
+loadScript("https://rawgit.com/theonion/fartscroll.js/master/fartscroll.js", loadFarts);
+							</code>
+						</pre>
 					</div>
 					<div class="code-footer">
 						<button class="code-copy-button" id="copy-fart" data-clipboard-text="Copy Me!">Copiar al portapapeles</button>
@@ -380,24 +405,23 @@
 						B&uacute;squeda en Google
 					</div>
 					<div class="code-content">
-						askew<br>
-						Atari breakout (Google images)<br>
-						Do a barrel roll<br>
-						Zerg rush<br>
-						the answer to life the universe and everything
-
+						<a href="https://www.google.com.ar/search?q=askew" target="_blank" style="display:block; text-decoration:none;">askew</a>
+						<a href="https://www.google.com.ar/search?q=Atari+breakout&tbm=isch" target="_blank" style="display:block; text-decoration:none;">Atari breakout</a>
+						<a href="https://www.google.com.ar/search?q=Do+a+barrel+roll" target="_blank" style="display:block; text-decoration:none;">Do a barrel roll</a>
+						<a href="https://www.google.com.ar/search?q=Zerg+rush" target="_blank" style="display:block; text-decoration:none;">Zerg rush</a>
+						<a href="https://www.google.com.ar/search?q=the+answer+to+life+the+universe+and+everything" target="_blank" style="display:block; text-decoration:none;">the answer to life the universe and everything</a>
 					</div>
 					<div class="code-header">
 						B&uacute;squeda en YouTube
 					</div>
 					<div class="code-content">
-						do the harlem shake<br>
-						use the force luke<br>
-						doge meme
+						<a href="https://www.youtube.com/results?search_query=do+the+harlem+shake" target="_blank" style="display:block; text-decoration:none;">do the harlem shake</a>
+						<a href="https://www.youtube.com/results?search_query=use+the+force+luke" target="_blank" style="display:block; text-decoration:none;">use the force luke</a>
+						<a href="https://www.youtube.com/results?search_query=doge+meme" target="_blank" style="display:block; text-decoration:none;">doge meme</a>
 					</div>
 				</div>
 			</div>
-			Para descubrir un poco m&aacute;s <a href="url">http://elgoog.im/</a>
+			Para descubrir un poco m&aacute;s <a href="http://elgoog.im/">http://elgoog.im/</a>
 		</div>
 	</div>
 
